@@ -1,0 +1,68 @@
+/*
+*Add fonts
+*Add buttons for changing fonts
+*Add Dark Mode
+*Add Reset Button
+*Sort any content Alphabetically?
+
+*/
+
+* {
+    margin: 5px;
+}
+
+html{
+background-color: rgb(0, 172, 230);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(173, 216, 230); /*lightblue*/
+    border-radius: 7px;
+    margin: 0.5% auto;
+    padding: 0.5%;
+    border: 2px solid black;
+    margin-bottom: 25px;
+    width: 90%;
+    position: relative;
+}
+
+header::after {
+    content: ''; /* Add content */
+    position: absolute;
+    top: 12.5%; /* Adjusted top position */
+    right: -0.5%; /* Adjusted right position */
+    width: 100%; /* Specify width */
+    height: 100%; /* Specify height */
+    background-color: red;
+    border-radius: 7px; /* Make it circular */
+    z-index: -1; /* Ensure it's above the header's background */
+    border: 0.5px solid black;
+}
+
+header > h2, header > nav, nav > ul > li   {
+display: inline-block;
+}
+
+
+img{
+    border-radius: 7px;
+    height: 33%;
+    width: 33%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+}
+
+img::after{
+    content: '';
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+
+
+
