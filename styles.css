@@ -4,6 +4,7 @@
 *Add Dark Mode
 *Add Reset Button
 *Sort any content Alphabetically?
+*buttons text grow with a strike
 
 */
 
@@ -45,24 +46,47 @@ display: inline-block;
 }
 
 
-img{
-    border-radius: 7px;
-    height: 33%;
-    width: 33%;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+/* Below done via:  https://dev.to/afif/css-shapes-with-rounded-corners-56h */
+.profile-pic {
+    width: 33%; 
+    height: 33%; 
+    display: inline-block;
+    background-color: ;
+    padding: 0;
+    margin: 20px;
+    filter: url(#round); 
     position: relative;
+    overflow: hidden; 
 }
 
-img::after{
+.profile-pic::before {
     content: '';
-    background-color: green;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    display: block;
+    padding-top: 100%; /* Maintain a square aspect ratio */
+    background: url(./assets/profilePhoto.jpeg) center/cover; 
+   /*   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); Diamond  */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon */
+    transform: scale(0.75); /* Adjust image and keep ratio */
 }
 
+/* Above done via: https://dev.to/afif/css-shapes-with-rounded-corners-56h */
 
+.mainHP{
+    display: flex;
+    align-items: center;
+    background-color: ;
+    margin-right: 10%;
+}
 
+.mainHP > * {
+    flex: 1; /* Allow items to grow and fill available space */
+    margin: 10px;
+}
 
-
+.AMintroduction{
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding:  1.5% 5%;
+}
 

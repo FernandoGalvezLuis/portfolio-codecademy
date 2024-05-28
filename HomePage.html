@@ -23,13 +23,10 @@
             </ul>            
         </nav>
     </header>
-    <main>
-        <div class="image-container">
-            <img src="./assets/profilePhoto.jpeg" alt="Fernando profile picture">
-        </div>
+    <main class="mainHP">
+        <div class="profile-pic"></div>
         
-       <!-- <img src="./assets/profilePhoto.jpeg"/> -->
-        <section>
+        <section class="AMintroduction">
             <h1>Fernando Galvez-Luis</h1>
             <h3>A Bit About Me</h3>
             <p>I'm a Business Development Master's Degree by the European University of A Coruña, turned into a Web Developer
@@ -47,5 +44,16 @@
         </ul>
     </footer>
     <script src="interact.js"></script> 
+    <!-- Below done via: https://dev.to/afif/css-shapes-with-rounded-corners-56h-->
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+              <filter id="round">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />    
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+          </defs>
+      </svg>
+      <!-- Above done via: https://dev.to/afif/css-shapes-with-rounded-corners-56h-->
 </body>
 </html>
