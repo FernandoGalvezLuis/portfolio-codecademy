@@ -26,6 +26,9 @@ header {
     margin-bottom: 25px;
     width: 90%;
     position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 
 header::after {
@@ -41,10 +44,60 @@ header::after {
     border: 0.5px solid black;
 }
 
-header > h2, header > nav, nav > ul > li   {
-display: inline-block;
+
+
+nav {
+    background-color: orange;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    /*overflow: hidden;*/
+    min-width: 0;
 }
 
+.navmenu {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+   /* flex-wrap: wrap;*/
+    width: 100%;
+    min-width: 0;
+}
+
+.navmenu > li {
+    margin-right: 0px; /* Add spacing between li elements */
+    min-width: 0;
+    flex-shrink: 1; 
+}
+
+a {
+    min-width: 0;
+    font-size: 1rem;
+    color: blue;
+     -webkit-text-stroke: 0.35px black;
+    display: inline-block; /* Ensure proper sizing */
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+
+    background-color: blue;
+  }
+
+  .pg-color{
+    min-width: 0 !important;
+  }
+/*
+a:link a:visited a:active a:hover{
+    color: inherit;
+    text-decoration: inherit;
+}
+*/
+a:hover {
+    transform: scale(4); /* Enlarge text on hover */
+    color: green;
+  }
 
 /* Below done via:  https://dev.to/afif/css-shapes-with-rounded-corners-56h */
 .profile-pic {
@@ -89,4 +142,25 @@ display: inline-block;
     border-radius: 7px;
     padding:  1.5% 5%;
 }
+
+.footer-icons li{
+    display: inline;
+    margin: 0% 5%;
+
+}
+.footer-icons{
+    background-color: rgb(173, 216, 230); /*lightblue*/
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    margin: 0.5% auto;
+    padding: 0.5%;
+    
+    margin-bottom: 25px;
+    width: 90%;
+
+}
+
+    
+
 

@@ -9,3 +9,14 @@ pgColorButton.onclick = () => {
     pgColorButton.innerHTML = `Changed ${colorCounter} time/s!`;
     colorCounter=++colorCounter;
 };
+
+const homeLink = document.querySelector('.backHome');
+const originalWidth = homeLink.offsetWidth;
+
+homeLink.onmouseover = ()=> {
+    homeLink.innerHTML = 'Home';
+    homeLink.style.width = originalWidth + 'px';};
+
+homeLink.onmouseout = () => {
+    homeLink.innerHTML = 'Fernando Web Developer'
+    homeLink.style.width = originalWidth + 'px'}
