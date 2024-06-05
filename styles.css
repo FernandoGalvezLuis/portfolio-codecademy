@@ -46,8 +46,10 @@ header::after {
 
 
 
+
+
 nav {
-    background-color: orange;
+    /*background-color: orange;*/
     width: auto;
     display: flex;
     flex-wrap: nowrap;
@@ -58,7 +60,7 @@ nav {
 .navmenu {
     list-style-type: none; /* Remove default list styles */
     padding: 0; /* Remove default padding */
-    background-color: red;
+    /*background-color: red;*/
     display: flex;
     justify-content: space-around;
    /* flex-wrap: wrap;*/
@@ -70,34 +72,52 @@ nav {
     margin-right: 0px; /* Add spacing between li elements */
     min-width: 0;
     flex-shrink: 1; 
+    font-size: 1.5rem;
+    text-decoration: none;
 }
-
-a {
+/*
+a.menu-link {
     min-width: 0;
     font-size: 1rem;
     color: blue;
      -webkit-text-stroke: 0.35px black;
-    display: inline-block; /* Ensure proper sizing */
+    display: inline-block; 
     transition: transform 0.3s ease;
     text-decoration: none;
     font-weight: bold;
-
-    background-color: blue;
+    text-align: center;
+    background-color: ;
   }
 
   .pg-color{
     min-width: 0 !important;
   }
+  */
 /*
 a:link a:visited a:active a:hover{
     color: inherit;
     text-decoration: inherit;
 }
 */
-a:hover {
+ a.menu-link:hover {
     transform: scale(4); /* Enlarge text on hover */
-    color: green;
+    color: red;
+    font-weight: bold; /* Makes other items move a bit, is weird when overing over
+    all elements*/
   }
+
+
+.backHome:hover{
+    transform: scale(4); 
+    text-align: center;
+    
+}
+
+.nameTitle{
+    width: 100%;
+    font-size: 3rem !important;
+    
+}
 
 /* Below done via:  https://dev.to/afif/css-shapes-with-rounded-corners-56h */
 .profile-pic {
@@ -141,6 +161,8 @@ a:hover {
     border: 1px solid black;
     border-radius: 7px;
     padding:  1.5% 5%;
+
+   
 }
 
 .footer-icons li{
@@ -161,6 +183,43 @@ a:hover {
 
 }
 
+.main-cert {
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
     
+.cert-list{
+    background-color: gray;
+    width: 30%;
+    margin: 2% auto;
+
+    border: solid black 2px;
+    border-radius: 7px;
+    padding-bottom: 3%;
+}
+
+.cert-list h2 {
+    text-align: center;
+    margin-bottom: 5%;
+    
+}
 
 
+.cert-list ul {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
+margin: auto;
+padding: 0;
+
+}
+
+.cert-list ul li {
+width: 70%;
+margin: auto;
+
+    }
